@@ -1,0 +1,22 @@
+<nav class="navbar">
+    <button class="menu-button" (click)="toggleMenu()">
+      <span class="menu-icon"></span>
+    </button>
+    <div class="logo">
+      <a routerLink="/">Logo</a>
+    </div>
+    <div class="nav-items">
+      <a routerLink="/cart">Cart</a>
+      <div class="profile-dropdown" [class.open]="isMenuOpen">
+        <button class="profile-button" (click)="toggleProfileDropdown()">
+          Profile
+        </button>
+        <div class="dropdown-content" [class.show]="isProfileDropdownOpen">
+          <a routerLink="/profile">Profile</a>
+          <a routerLink="/settings">Settings</a>
+          <a routerLink="/logout">Logout</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  

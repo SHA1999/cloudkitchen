@@ -1,0 +1,11 @@
+<button (click)="togglePopup()">Open Popup</button>
+
+<div class="popup-overlay" *ngIf="showPopup"></div>
+
+<div class="popup" *ngIf="showPopup">
+<div class="popup-content">
+<h2>Popup Content</h2>
+<p>This is the popup content.</p>
+<button (click)="onPopupButtonClick()">Button Inside Popup</button>
+</div>
+</div>
